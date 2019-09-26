@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>AppExoesqueleto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/estilo.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="modal fade" id="modalAjuda" tabindex="-1" role="dialog" aria-labelledby="modalAjuda" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalAjudaTitle">Ajuda</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        [texto de ajuda]
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btndescansar" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Treino João 25/07/2018</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="fontecinza">Paciente: </p> 
+                        <p class="fonteblack">João</p>
+                        <p class="fontecinza">Tipo de Treino: </p>
+                        <p class="fonteblack">Preensão palmar total</p>
+                        <p class="fontecinza">Número de Séries: </p>
+                        <p  class="fonteblack">3</p>
+                        <p class="fontecinza">Número de Repetições: </p>
+                        <p  class="fonteblack">15</p>
+                        <p class="fontecinza">Tempo de Intervalo: </p>
+                        <p  class="fonteblack">2 min</p>
+                        <p class="fontecinza">Duração: </p>
+                        <p  class="fonteblack">9 min</p>
+                        <p class="fontecinza">Lado anatômico: </p>
+                        <p  class="fonteblack">Esquerdo</p>
+                        <p class="fontecinza">Evolução: </p>
+                        <p  class="fonteblack">O paciente teve uma resposta muito boa ao treino, com exceção do dedo indicador em que houve um pequeno incômodo durante o exercício.</p>
+                        <p class="fontecinza">Profissional Técnico: </p>
+                        <p  class="fonteblack">Maria</p>
+                        <p class="fontecinza">Diagnóstico Clínico: </p>
+                        <p  class="fonteblack">Rompimento dos ligamentos</p>
+                        <table class="table-hover table-bordered">
+                            <tr>
+                                <td class="tabelacabecalho"> Calibração</td>
+                            </tr>
+                            <tr>
+                                <td class="fontecinza">Polegar: <b class="fonteblack">23 mín, 62 máx.</b></td>
+                            </tr>
+                            <tr>   
+                                <td class="fontecinza">Indicador: <b class="fonteblack">12 mín, 45 máx.</b></td>
+                            </tr>
+                            <tr>
+                                <td class="fontecinza">Médio: <b class="fonteblack">6 mín, 80 máx.</b></td>
+                            </tr>
+                            <tr>
+                                <td class="fontecinza">Anelar: <b class="fonteblack">40 mín, 60 máx.</b></td>
+                            </tr>
+                            <tr>
+                                <td class="fontecinza">Mínimo: <b class="fonteblack">19 mín, 78 máx.</b></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btndescansar" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-meio container-fluid">
+            <form class="form-signin">
+                <button type="button" data-toggle="modal" data-target="#modalAjuda" class="btn btn-primary btn-circle">?</button>
+                <h1 class="titulo">AppExoesqueleto</h1>
+                <p>Selecione o Paciente:</p>
+                <select class="form-cadastro form-control">
+                    <option value="João">João</option>
+                </select>                   
+                <a href="gerenciarpacientes.html" class="btn btn-lg btn-primary btn-block">Gerenciar Pacientes</a>
+                <p class="fontecinza">Histórico de treinos:</p>
+                <div class="text-center">
+                    <table class="table-hover table-bordered">
+                        <tr>
+                            <td class="tabelacabecalho">Data do Treino</td>
+                            <td class="tabelacabecalho">Tipo do Treino</td> 
+                            <td class="tabelacabecalho">+Informações</td>
+                        </tr>
+                        <tr>
+                            <td>25/07/2018</td>
+                            <td>Todos</td> 
+                            <td><button type="button" class="btn btn-primary btndescansar" data-toggle="modal" data-target="#exampleModalLong">Visualizar</button></td>
+                        </tr>
+                    </table>
+                </div>
+                <a href=index.html class="btn btn-lg btn-primary btn-block ">Logout</a>
+                <a href=calibracao.html class="btn btn-lg btn-primary btn-block">Novo Treino</a>
+            </form>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
