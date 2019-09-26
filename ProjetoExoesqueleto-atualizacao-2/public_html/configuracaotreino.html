@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="pt-br">
+    <head>
+        <title>AppExoesqueleto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/estilo.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    </head>
+    <body class="text-center">
+        <div class="modal fade" id="modalAjuda" tabindex="-1" role="dialog" aria-labelledby="modalAjuda" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalAjudaTitle">Ajuda </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        [texto de ajuda]
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btndescansar" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="container-fluid container-meio">
+            <button type="button" data-toggle="modal" data-target="#modalAjuda" class="btn btn-primary btn-circle">?</button>
+            <h1 class="titulo">Configuração do Treino</h1>
+            <form>
+            <div class="text-left ">
+                <p class="subtitulo">Tipo de Exercício</p>
+                <select required="" class="form-cadastro form-control">
+                    <option  value="selecioneoexercicio">Selecione o exercício</option>
+                    <option value="pinca">Pinça</option>
+                    <option value="preensaopalmartotal">Preensão palmar total</option>
+                    <option value="customizado">Customizado</option>
+                </select>
+                <p class="subtitulo">Habilite os dedos do exercício customizado</p>
+                <p><input type="checkbox" name="dedo1" value="polegar"> Polegar</p>
+                <p><input type="checkbox" name="dedo2" value="indicador"> Indicador</p>
+                <p><input type="checkbox" name="dedo3" value="medio"> Médio</p>
+                <p><input type="checkbox" name="dedo4" value="anelar"> Anelar</p>
+                <p><input type="checkbox" name="dedo5" value="minimo"> Mínimo</p>
+                <p class="subtitulo">Lado anatômico</p>
+                <input type="radio" name="ladoanatomico" value="esquerdo"> Esquerdo
+                <input type="radio" name="ladoanatomico" value="direito"> Direito
+                <!--
+                <p class="subtitulo">Velocidade</p>
+                <p>123</p>
+                <input type="range" name="velocidade">
+                -->
+                <p class="subtitulo">Número de Séries</p> 
+                <input required="" type="number" min="1" class="btnumero form-control">
+                <p class="subtitulo">Número de Repetições</p> 
+                <input required="" type="number" min="1"  class="btnumero form-control">
+                <p class="subtitulo">Intervalo (minutos)</p>
+                <input required="" type="number" min="1"  class="btnumero form-control">
+            </div>
+            <button type="submit" class="btn btn-lg btn-primary btn-block">Voltar</button><button type="submit" class="btn btn-lg btn-primary btn-block">Revisar</button>            
+        </form>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+https://albert-gonzalez.github.io/easytimer.js/
+-->
+<html lang="pt-br">
+    <head>
+        <title>AppExoesqueleto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/estilo.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <div class="modal fade" id="modalAjuda" tabindex="-1" role="dialog" aria-labelledby="modalAjuda" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalAjudaTitle">Ajuda </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        [texto de ajuda]
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btndescansar" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="container-meio  container-fluid">
+            <button type="button" data-toggle="modal" data-target="#modalAjuda" class="btn btn-primary btn-circle">?</button>
+            <h1 class="titulo">Treino</h1>
+
+            <div class="text-center">
+                    <div id="chronoExample">
+                        <div class="cronometro values">00:00:00</div>
+                        <div>
+                            <button class="pauseButton btn btn-primary btn-startstop"><span class="fas fa-pause"> </span></button>
+                            <button class="startButton btn btn-primary btn-startstop" ><span class="fas fa-play"> </span></button>
+                            <button class="stopButton btn btn-primary btn-startstop"><span class="fas fa-stop"> </span></button>
+                        </div>                   
+                    </div>
+                    <a href="dados.html" class="btn btn-lg btn-primary btn-block">Encerrar Treino</a>
+
+            </div>
+            <div class="text-left">              
+                <p class="subtitulo">Resumo do Treino</p>
+                <p>Tipo de Treino: Preensão palmar total</p> 
+                <p>Número de séries: 3</p>
+                <p>Número de Repetições: 15</p>
+                <p>Tempo de Intervalo: 2 min</p>
+                <p>Tempo estimado: 8 min</p>                
+                <p>Evolução: </p> <textarea class="form-control rounded-0" id="evolucao" rows="3"></textarea>  
+            </div>
+        </div>
+        <script src="js/easytimer.min.js" type="text/javascript"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script>
+            var timer = new easytimer.Timer();
+            $('#chronoExample\n\
+        .startButton').click(function () {
+                timer.start();
+            });
+            $('#chronoExample\n\
+        .pauseButton').click(function () {
+                timer.pause();
+            });
+            $('#chronoExample\n\
+        .stopButton').click(function () {
+                timer.stop();
+            });
+            $('#chronoExample\n\
+        .resetButton').click(function () {
+                timer.reset();
+            });
+            timer.addEventListener('secondsUpdated', function (e) {
+                $('#chronoExample\n\
+        .values').html(timer.getTimeValues().toString());
+            });
+            timer.addEventListener('started', function (e) {
+                $('#chronoExample\n\
+        .values').html(timer.getTimeValues().toString());
+            });
+            timer.addEventListener('reset', function (e) {
+                $('#chronoExample\n\
+        .values').html(timer.getTimeValues().toString());
+            });
+        </script>
+    </body>
+</html>
