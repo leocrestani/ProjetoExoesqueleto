@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="pt-br">
+    <head>
+        <!--
+        Poder selecionar o paciente na tabela, contendo os dados nome e número de telefone, e a partir do paciente, preencher os campos acima com o dados do paciente selecionado
+        -->
+        <title>AppExoesqueleto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/estilo.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="modal fade" id="modalAjuda" tabindex="-1" role="dialog" aria-labelledby="modalAjuda" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalAjudaTitle">Ajuda </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        [texto de ajuda]
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btndescansar" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="modal fade" id="novoPacienteModal" tabindex="-1" role="dialog" aria-labelledby="novoPacienteModal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="novoPacienteModalTitle">Novo Paciente </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-signin">
+                            <input type="text" id="inputNome" class="form-control" placeholder="Nome" required="" autofocus="">
+                            <input type="text" id="inputDataNasc" class="form-control" placeholder="Data de nascimento" required="" autofocus="">
+                            <input type="text" id="inputTelefone" class="form-control" placeholder="Telefone" required="" autofocus="">
+                            <input type="text" id="inputEndereco" class="form-control" placeholder="Endereço" required="" autofocus="">
+                            <input type="text" id="inputConvenio" class="form-control" placeholder="Convênio" required="" autofocus="">
+                            <input type="text" id="inputEmail" class="form-control" placeholder="Email" required="" autofocus="">
+                            <input type="text" id="inputProfissao" class="form-control" placeholder="Profissão" required="" autofocus="">
+                            <input type="text" id="inputDiagnostico" class="form-control" placeholder="Diagnóstico Clínico" required="" autofocus="">
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-secondary btndescansar " >Salvar</button>
+                        <button type="button" class="btn btn-secondary btndescansar" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">João </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table-hover table-bordered">
+                            <tr>
+                                <td class="tabelacabecalho"> Nome</td> <td> João</td>
+                            </tr>
+                            <tr>
+                                <td class="tabelacabecalho"> Data de nascimento</td>
+                                <td>04/01/1984</td>
+                            </tr>
+                            <tr>   
+                                <td class="tabelacabecalho">Telefone</td>
+                                <td>35233446</td>
+                            </tr>
+                            <tr>
+                                <td class="tabelacabecalho">Endereço</td>
+                                <td>Luzerna</td>
+                            </tr>
+                            <tr>
+                                <td class="tabelacabecalho">Convênio</td>
+                                <td>Unimed</td>
+                            </tr>
+                            <tr>
+                                <td class="tabelacabecalho">Email</td>
+                                <td>joaosilva@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td class="tabelacabecalho">Diagnóstico Clínico</td>
+                                <td>Rompimento de Ligamento</td>                                
+                            </tr>
+                            <tr>
+                                <td class="tabelacabecalho">Profissão</td>
+                                <td>Pedreiro</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-lg btn-primary btndescansar">Salvar</button>
+                        <button type="button" class="btn btn-secondary btndescansar" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-meio container-fluid">
+            <form class="form-signin">
+                <button type="button" data-toggle="modal" data-target="#modalAjuda" class="btn btn-primary btn-circle">?</button>
+                <h1 class="titulo">AppExoesqueleto</h1>
+                <button type="button" class="btn btn-lg btn-primary btn-block" data-toggle="modal" data-target="#novoPacienteModal">Novo</button>
+                <div class="text-center tabelamargin">
+                    <table class="table table-hover table-bordered">
+                        <tr>
+                            <td class="tabelacabecalho">Nome</td>
+                            <td class="tabelacabecalho">Telefone</td>
+                            <td class="tabelacabecalho">+Informações</td>
+                        </tr>
+                        <tr>
+                            <td>João Silva</td>
+                            <td>35233446</td>
+                            <td><button type="button" class="btn btn-primary btndescansar" data-toggle="modal" data-target="#exampleModalLong">Editar</button></td>
+                        </tr>
+                    </table>
+                </div>
+                <button type="submit" class="btn btn-lg btn-primary btn-block">Voltar</button>
+            </form>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>

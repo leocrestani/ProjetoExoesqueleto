@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>AppExoesqueleto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/estilo.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    </head>
+    <body class ="text-center">
+        <div class="modal fade" id="modalAjuda" tabindex="-1" role="dialog" aria-labelledby="modalAjuda" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalAjudaTitle">Ajuda </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        [texto de ajuda]
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btndescansar" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <form class="form-signin">
+            <button type="button" data-toggle="modal" data-target="#modalAjuda" class="btn btn-primary btn-circle">?</button>
+            <h1 class="titulo">Cadastre-se</h1>
+            <label for="inputUser" class="sr-only">Profissional Técnico</label>
+            <input type="text" id="inputUser" class="form-control" placeholder="Profissional Técnico" required="" autofocus="">
+            <label for="inputTelefone" class="sr-only">Telefone</label>
+            <input type="text" id="inputTelefone" class="form-control" placeholder="Telefone" required="">
+            <label for="inputEmail" class="sr-only">Email</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email" required="">
+            <label for="inputArea" class="sr-only">Área de atuação</label>
+            <input type="text" id="inputArea" class="form-control" placeholder="Área de atuação" required="">
+            <label for="inputUsuario" class="sr-only">Usuário</label>
+            <input type="text" id="inputUsuario" class="form-control" placeholder="Usuário" required="">
+            <label for="inputSenha" class="sr-only">Senha</label>
+            <input type="password" id="inputSenha" class="form-control" placeholder="Senha" required="">
+            <label for="inputRepetir" class="sr-only">Repetir Senha</label>
+            <input type="password" id="inputRepetir" class="form-control" placeholder="Repetir Senha" required="">
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Salvar</button>
+            <button type="submit" class="btn btn-lg btn-primary btn-block">Voltar</button>
+        </form>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
